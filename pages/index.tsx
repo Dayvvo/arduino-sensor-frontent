@@ -43,12 +43,12 @@ export default function Home() {
               GREEN HOUSE TRACKER
             </div>
 
-            <div className="section" style={{maxWidth:'60%',margin:'auto'}}>
+            <div className="" style={{maxWidth:'60%',margin:'auto'}}>
 
               {     
                 api.length?
-                api.map((values:any,key:number)=>(
-                  <div className="wytCard paddBoth" key={key}>
+                api.reverse().map((values:any,key:number)=>(
+                  <div className="section wytCard paddBoth" key={key}>
           
                     <div className='small thick' style={{fontSize:'90%'}}>Minna({values.time.slice(0,7)})</div>
                   
