@@ -12,7 +12,8 @@ export default function Home() {
 
   useEffect(()=>{
     console.log('fetch')
-    fetch('http://opeadeyemi.pythonanywhere.com/api/get-parameters/',{
+    fetch(`${window.location.protocol.includes('https')?'https://':'http://'}
+    opeadeyemi.pythonanywhere.com/api/get-parameters/`,{
       method:'get',
       headers:{
         "Content-Type":'application/json'
