@@ -1,0 +1,178 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --hash: #F5F5F5;
+    --textCol: #333333;
+    --darkblue: #233447;
+    --darkhash: #E5E5E5;
+
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    color: var(--textCol);
+}
+
+.sideElements{
+    font-size: 16px;
+
+    .circle{
+        background: var(--hash);
+        padding: 0.6em;
+        font-size: 17px;
+    }
+}
+
+main{
+    padding-left: 1em;
+    padding-right:1em;
+
+    @media(min-width:600px){
+        padding-left: 1.5em;
+        padding-right:1.5em;
+    }
+
+    @media(min-width:800px){
+        padding-left: 2.5em;
+        padding-right: 2.5em;    
+    }
+
+    .topBoard{
+        display: grid;
+        grid-template-columns: 44% 54%;
+        grid-column-gap: 2%;
+    
+        @media(min-width: 900px){
+            grid-template-columns: 39% 59%;
+        }       
+        >div{
+            border: 1px solid var(--hash);
+            padding: 1em 1.5em;
+        }
+
+        .wallet{
+            transform: rotate(-45deg);
+            font-size: 16px;
+        }
+
+        
+    }
+
+    .table{
+        display: grid;
+
+        grid-template-columns: 38% 59%;
+        grid-column-gap: 3%;
+        @media(min-width: 900px){
+            grid-template-columns: 33% 64%;
+            // grid-column-gap: 2em;
+        }       
+
+        >div:nth-child(1){
+            border: 1px solid var(--hash);
+            padding: 1em 1.5em;
+        }
+
+    
+
+    }
+
+
+    table{
+        border-collapse: collapse;
+        .tableHeader{
+            tr{
+                background: var(--hash);
+            }
+            border-bottom: 1px solid var(--textCol);
+
+        }
+
+        td{
+            min-height: 50px;
+            padding: 0.8em 0.7em;
+            // text-align: center;
+        }
+
+        tbody {
+            td{
+                font-size:95%;
+            }
+        }
+}
+    
+ 
+
+}
+
+.wytCard{ 
+    background: #fff;
+    border-radius: 5px;
+    
+
+
+    >div.grid{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+.searchBtn{
+    padding:0.7em 1em;
+    outline: none;
+    outline-color: transparent;
+
+    &:focus,:active{
+        outline: none;
+    }
+
+}
+.invisibleBtn{
+    background: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-style: none;
+    height: 100%;
+    >*{
+        font-size: 20px;
+    }
+}
+
+.hashCards{
+    background: var(--darkhash);
+    padding:0.7em 1em;
+    font-weight: 500;
+
+}
+.border{
+    border: 1px solid var(--hash);
+}
+
+.head{
+    font-size: 16px;
+    font-weight: 600;
+    @media(min-width: 600px){
+        font-size: 18px;
+    }
+
+    @media(min-width: 800px){
+        font-size: 20px;
+    }
+
+}
+
+
+
+.dummy{
+    background: url('../public/pattern-bg.png');
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
