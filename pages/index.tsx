@@ -26,7 +26,7 @@ export default function Home() {
     })
     .then(res=>{
       if (res.status===200) {
-        setApi(res.data)        
+        setApi(res.data.reverse())        
       }
     
     })
@@ -47,7 +47,7 @@ export default function Home() {
 
               {     
                 api.length?
-                api.reverse().map((values:any,key:number)=>(
+                api.map((values:any,key:number)=>(
                   <div className="section wytCard paddBoth" key={key}>
           
                     <div className='small thick' style={{fontSize:'90%'}}>Minna({values.time.slice(0,7)})</div>
