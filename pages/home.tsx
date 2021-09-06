@@ -25,7 +25,7 @@ const Home = ({className}:{className:string})=>{
         setSoilInterVal(
             setInterval(()=>{
                 setIterateSoil(c=>c+1);
-            },180000)
+            },60000)
         )
         
     }
@@ -526,11 +526,11 @@ const Home = ({className}:{className:string})=>{
         setTempInterVal(
             setInterval(()=>{
                setIterateTemp(c=>(c+1));
-            },180000)
+            },35000)
         )
         
     }
-
+    //27 70 50
 
     //  HUMIDITY
     const [iterateHumid,setIterateHumid] = useState(-1);
@@ -749,7 +749,7 @@ const Home = ({className}:{className:string})=>{
         setHumidInterVal(
             setInterval(()=>{
                 setIterateHumid(c=>c+1);
-            },180000)
+            },30000)
         )
         
     }
@@ -770,9 +770,9 @@ const Home = ({className}:{className:string})=>{
 
 
     const [parameters,setParameters] = useState({
-        temp:tempRounds[0],
-        humid:humidRounds[0],
-        soil:soilRounds[0]
+        temp:0,
+        humid:0,
+        soil:0
     })
 
 
@@ -805,7 +805,7 @@ const Home = ({className}:{className:string})=>{
                         </button>
 
                         <div>
-                            {soilStarted?parameters.soil:null}
+                            {soilStarted  ?parameters.soil:null}
                         </div>
                     </div>
 
@@ -819,7 +819,7 @@ const Home = ({className}:{className:string})=>{
                         </button>
 
                         <div>
-                            { tempStarted?parameters.temp:null}
+                            { tempStarted ?parameters.temp:null}
                         </div>
 
                     </div>
@@ -834,7 +834,7 @@ const Home = ({className}:{className:string})=>{
                         </button>
 
                         <div>
-                            {humidStarted?parameters.humid:null}
+                            {humidStarted ?parameters.humid:null}
                         </div>
 
                     </div>
