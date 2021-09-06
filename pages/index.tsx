@@ -8,7 +8,7 @@ const Welcome =({className}:{className:string})=>{
 
         <div className={className}>
             <div className='flexC'>
-                <Link href='/home'> 
+                <Link href='/scdj-2303sd'> 
                     <button>Get Started</button>
                 </Link>
 
